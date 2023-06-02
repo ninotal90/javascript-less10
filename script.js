@@ -25,27 +25,27 @@ apiRequest()
 
 2;
 
-// let divConteiner = document.querySelector(".conteiner");
+let divConteiner = document.querySelector(".conteiner");
 
-// async function asyncFunction() {
-//   let element = await fetch("https://reqres.in/api/users?page=2");
-//   if (element.status !== 200) {
-//     throw "error";
-//   }
-//   let responsInfo = await element.json();
-//   return responsInfo;
-// }
+async function asyncFunction() {
+  let element = await fetch("https://reqres.in/api/users?page=2");
+  if (element.status !== 200) {
+    throw "error";
+  }
+  let responsInfo = await element.json();
+  return responsInfo;
+}
 
-// asyncFunction()
-//   .then((dataJs) => {
-//     dataJs.data.forEach((object) => {
-//       console.log(object);
-//       let liElement = document.createElement("li");
-//       liElement.innerText = `${object.first_name}`;
-//       let ulElement = document.createElement("li");
+asyncFunction()
+  .then((dataJs) => {
+    dataJs.data.forEach((object) => {
+      console.log(object);
+      let liElement = document.createElement("li");
+      liElement.innerText = `${object.first_name}`;
+      let ulElement = document.createElement("li");
 
-//       ulElement.appendChild(liElement);
-//       divConteiner.appendChild(ulElement);
-//     });
-//   })
-//   .catch((error) => console.log(error));
+      ulElement.appendChild(liElement);
+      divConteiner.appendChild(ulElement);
+    });
+  })
+  .catch((error) => console.log(error));
