@@ -42,7 +42,7 @@ asyncFunction()
       console.log(object);
       let liElement = document.createElement("li");
       liElement.innerText = `${object.first_name}`;
-      let ulElement = document.createElement("li");
+      let ulElement = document.createElement("ul");
 
       ulElement.appendChild(liElement);
       divConteiner.appendChild(ulElement);
